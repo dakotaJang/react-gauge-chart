@@ -1,0 +1,39 @@
+{
+  "name": "react-gauge-chart",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "prebuild:dev": "rimraf build",
+    "build:dev": "rollup -c --environment DEVELOPMENT",
+    "start": "concurrently \"npm run build:dev -- -w\" \"http-server build -o\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakotaJang/react-gauge-chart.git"
+  },
+  "author": "dakotaJang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dakotaJang/react-gauge-chart/issues"
+  },
+  "homepage": "https://github.com/dakotaJang/react-gauge-chart#readme",
+  "dependencies": {
+    "gauge-chart-using-d3": "git+https://github.com/dakotaJang/gauge-chart-using-d3.git#v0.0.1",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@types/react-dom": "^16.9.8",
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "typescript": "^3.9.7"
+  }
+}
